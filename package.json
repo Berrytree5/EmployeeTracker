@@ -1,0 +1,28 @@
+{
+  "name": "employeetracker",
+  "version": "1.0.0",
+  "description": "Employee tracker for business owner to view and manage departments",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Berrytree5/EmployeeTracker.git"
+  },
+  "keywords": [
+    "berrytree5"
+  ],
+  "author": "berrytree5",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Berrytree5/EmployeeTracker/issues"
+  },
+  "homepage": "https://github.com/Berrytree5/EmployeeTracker#readme",
+  "dependencies": {
+    "i": "^0.3.7",
+    "inquirer": "^8.2.4",
+    "mysql2": "^3.6.2",
+    "npm": "^10.2.1"
+  }
+}
