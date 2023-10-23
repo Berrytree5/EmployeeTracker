@@ -3,7 +3,7 @@ const EmployeeQueries = require('./queries'); // Import your query functions
 
 async function startApp() {
   try {
-    // Your main application logic here
+   
     console.log('Employee Tracker Application');
 
     // Example: View all employees
