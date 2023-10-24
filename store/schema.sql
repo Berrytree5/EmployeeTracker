@@ -1,5 +1,5 @@
 -- Create the database
-CREATE DATABASE IF NOT EXISTS employee_tracker;
+CREATE DATABASE IF NOT EXISTS 'db-store';
 USE 'db-store';
 
 -- Create the 'departments' table
