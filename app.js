@@ -1,32 +1,93 @@
 const inquirer = require('inquirer');
-const EmployeeQueries = require('./queries'); // Import your query functions
+const EmployeeQueries = require('./queries');
 
-async function startApp() {
-  try {
-   
-    console.log('Employee Tracker Application');
-
-    // Example: View all employees
-    const employees = await EmployeeQueries.getAllEmployees();
-    console.table(employees);
-
-    // Example: Add a new employee
-    const employeeData = await inquirer.prompt([
-      // Inquirer prompts for employee data (first name, last name, role, manager)
-    ]);
-    await EmployeeQueries.addEmployee(employeeData);
-
-    // Example: Update an employee's role
-    const employeeToUpdate = await inquirer.prompt([
-      // Inquirer prompt to select an employee to update
-    ]);
-    const newRole = await inquirer.prompt([
-      // Inquirer prompt for the new role
-    ]);
-    await EmployeeQueries.updateEmployeeRole(employeeToUpdate.employeeId, newRole.roleId);
-  } catch (error) {
-    console.error('Error:', error);
-  }
+function mainMenu() {
+  inquirer
+    .prompt([
+      {
+        type: 'list',
+        name: 'action',
+        message: 'Select an action:',
+        choices: [
+          'View all departments',
+          'View all roles',
+          'View all employees',
+          'Add a department',
+          'Add a role',
+          'Add an employee',
+          'Update an employee role',
+          'Exit',
+        ],
+      },
+    ])
+    .then(async (answers) => {
+      switch (answers.action) {
+        case 'View all departments':
+          await viewAllDepartments();
+          break;
+        case 'View all roles':
+          await viewAllRoles();
+          break;
+        case 'View all employees':
+          await viewAllEmployees();
+          break;
+        case 'Add a department':
+          await addDepartment();
+          break;
+        case 'Add a role':
+          await addRole();
+          break;
+        case 'Add an employee':
+          await addEmployee();
+          break;
+        case 'Update an employee role':
+          await updateEmployeeRole();
+          break;
+        case 'Exit':
+          console.log('Exiting the application.');
+          process.exit();
+          break;
+      }
+      mainMenu();
+    });
 }
 
-startApp();
+async function viewAllDepartments() {
+
+}
+
+async function viewAllRoles() {
+  
+}
+
+async function viewAllEmployees() {
+  
+}
+
+async function addDepartment() {
+  inquirer
+    .prompt([
+      {
+        type: 'input',
+        name: 'name',
+        message: 'Enter the name of the department:',
+      },
+    ])
+    .then(async (answers) => {
+    
+    });
+}
+
+async function addRole() {
+  // User fills out role information
+}
+
+async function addEmployee() {
+  // User fills out Add Employee prompt
+}
+
+async function updateEmployeeRole() {
+  // User updates employee role when prompted
+}
+
+mainMenu();
