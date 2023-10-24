@@ -5,7 +5,7 @@ const db = mysql.createPool({
   host: 'localhost',
   user: 'root',
   password: '3431drew', 
-  database: 'db-store', 
+  database: 'employee_tracker', 
   connectionLimit: 10,
 });
 
