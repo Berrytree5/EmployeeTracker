@@ -19,11 +19,11 @@ Employee Tracker that makes it seamless to Add, Update, or Edit Employee's roles
 ## Installation
 Node.js | Inquirer | MySQL
 ## When installed :
-# 1. Clone repository.
-# 2. Run terminal
-# 3. Input command 'npm install'
-# 4. Run command 'node index.js'
-# 5. The program will begin and you will see prompts.
+## 1. Clone repository.
+## 2. Run terminal
+## 3. Input command 'npm install'
+## 4. Run command 'node index.js'
+## 5. The program will begin and you will see prompts.
 
 ## Usage
 Frequency,Installation,Contributions and tests.
